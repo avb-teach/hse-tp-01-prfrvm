@@ -1,1 +1,2 @@
-collect_files2.py "$@"
+#!/bin/bash
+collect_files.py "$@"
