@@ -19,8 +19,9 @@ for dirpaths, dirs, files in os.walk(in_dir):
     cut_path = os.path.relpath(dirpaths, in_dir )
 
     list_of_pieces = cut_path.split(os.sep)
+
     right_pieces = ''
-    for piece in list_of_pieces[:max_depth]:
+    for piece in list_of_pieces[-(max_depth - 1):]:
         right_pieces  = os.path.join(right_pieces,  piece)
 
     right_path = os.path.join(out_dir, right_pieces)
@@ -38,7 +39,3 @@ for dirpaths, dirs, files in os.walk(in_dir):
 https://pythonworld.ru/moduli/modul-os-path.html
 https://digitology.tech/docs/python_3/library/os.path.html
 '''
-
-
-
-
